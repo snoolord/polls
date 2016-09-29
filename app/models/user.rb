@@ -12,6 +12,6 @@ class User < ActiveRecord::Base
     class_name: :Response
 
     def completed_polls
-      self.responses.joins(LEFT JOIN questions ON responses.).joins(:polls).group(:res)
+      self.responses.joins().joins(:polls).group(:res)
     end
 end

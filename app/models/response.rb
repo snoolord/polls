@@ -3,6 +3,7 @@ class Response < ActiveRecord::Base
   validates :answer_id, presence: true
   validate :rigger
 
+
   belongs_to :answer_choice,
     primary_key: :id,
     foreign_key: :answer_id,
